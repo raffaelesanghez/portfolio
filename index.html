@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Base -->
+  <title>Raffaele Sanghez | Web Developer</title>
+  <meta name="description" content="Portfolio personale di Raffaele Sanghez, Web Developer. Presentazione, competenze e formazione.">
+  <meta name="keywords" content="Raffaele Sanghez, Web Developer, Portfolio, HTML, CSS, JavaScript, PHP, MySQL, WordPress, Responsive Design">
+  <meta name="author" content="Raffaele Sanghez">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Raffaele Sanghez | Web Developer">
+  <meta property="og:description" content="Portfolio personale di Raffaele Sanghez, Web Developer. Presentazione, competenze e formazione.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.raffaelesanghez.com/">
+  <meta property="og:image" content="https://www.raffaelesanghez.com/img/profilo.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Raffaele Sanghez | Web Developer">
+  <meta name="twitter:description" content="Portfolio personale di Raffaele Sanghez, Web Developer. Presentazione, competenze e formazione.">
+  <meta name="twitter:image" content="https://www.raffaelesanghez.com/img/profilo.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- Font e CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">RS</div>
+    <ul>
+      <li><a href="#about">Chi sono</a></li>
+      <li><a href="#skills">Competenze</a></li>
+      <li><a href="formazione.html">Formazione</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sezione Chi sono -->
+  <section id="about" class="about">
+    <div class="about-container">
+      <img src="img/1583160815378.jpeg" alt="">
+      <div class="about-text">
+        <h1>Ciao, sono <span>Raffaele Sanghez</span></h1>
+        <p>
+          Sono un <strong>Web Developer</strong> con una forte passione per la creazione di interfacce moderne, accessibili e responsive. 
+          Mi dedico a trasformare le idee in esperienze digitali funzionali, eleganti e performanti. 
+          Continuo a formarmi sulle tecnologie più recenti per offrire soluzioni sempre all’avanguardia.
+        </p>
+        <a href="contatti.html" class="btn">Contattami</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione Competenze -->
+  <section id="skills" class="skills">
+    <h2>Competenze</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML5</div>
+      <div class="skill-card">CSS3 / SASS</div>
+      <div class="skill-card">JavaScript / jQuery</div>
+      <div class="skill-card">PHP / MySQL</div>
+      <div class="skill-card">Bootstrap</div>
+      <div class="skill-card">WordPress</div>
+      <div class="skill-card">Git / GitHub</div>
+      <div class="skill-card">Java</div>
+      <div class="skill-card">Responsive Design</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Raffaele Sanghez – Web Developer</p>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/raffaele-sanghez-1a75a190/" target="_blank" rel="noopener">LinkedIn</a> |
+      <a href="mailto:raffosan@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    // Effetto fade-in allo scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          sec.classList.add('visible');
+        }
+      });
+    });
+  </script>
+<script>
+  // Funzione per rendere visibili le sezioni quando entrano in viewport
+  function checkSections() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        sec.classList.add('visible');
+      }
+    });
+  }
+
+  // Controlla le sezioni al caricamento della pagina
+  window.addEventListener('load', checkSections);
+
+  // Controlla le sezioni quando si scrolla
+  window.addEventListener('scroll', checkSections);
+
+  // --- Script specifico per il form contatti ---
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // blocca invio reale
+      this.style.display = 'none';
+      const formMessage = document.getElementById('formMessage');
+      if(formMessage){
+        formMessage.style.display = 'block';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contatti | Raffaele Sanghez</title>
+  <meta name="description" content="Contatta Raffaele Sanghez, Web Developer. Compila il modulo per richiedere informazioni o collaborazioni.">
+  <meta name="author" content="Raffaele Sanghez">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">RS</div>
+    <ul>
+      <li><a href="index.html#about">Chi sono</a></li>
+      <li><a href="index.html#skills">Competenze</a></li>
+      <li><a href="index.html#education">Formazione</a></li>
+      <li><a href="contatti.html" class="active">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sezione Contatti -->
+  <section id="contact" class="contact">
+    <h1>Contattami</h1>
+    <p>Hai una domanda o vuoi propormi una collaborazione? Compila il form qui sotto 👇</p>
+
+    <form id="contactForm" class="contact-form">
+      <div class="form-group">
+        <label for="nome">Nome*</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="messaggio">Messaggio*</label>
+        <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Invia Messaggio</button>
+    </form>
+
+    <div id="formMessage" class="form-message" style="display:none;">
+      ✅ Grazie per avermi contattato! Ti risponderò al più presto.
+    </div>
+
+    <p style="margin-top:30px;">
+      📧 Oppure scrivimi direttamente a 
+      <a href="mailto:raffosan@gmail.com">raffosan@gmail.com</a>
+    </p>
+    <p>
+      🔗 <a href="https://www.linkedin.com/in/raffaele-sanghez-1a75a190/" target="_blank" rel="noopener">Profilo LinkedIn</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+<footer>
+    <p>© 2025 Raffaele Sanghez – Web Developer</p>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/raffaele-sanghez-1a75a190/" target="_blank" rel="noopener">LinkedIn</a> |
+      <a href="mailto:raffosan@gmail.com">Email</a>
+    </div>
+  </footer>
+<script>
+  // Funzione per rendere visibili le sezioni quando entrano in viewport
+  function checkSections() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        sec.classList.add('visible');
+      }
+    });
+  }
+
+  // Controlla le sezioni al caricamento della pagina
+  window.addEventListener('load', checkSections);
+
+  // Controlla le sezioni quando si scrolla
+  window.addEventListener('scroll', checkSections);
+
+  // --- Script specifico per il form contatti ---
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // blocca invio reale
+      this.style.display = 'none';
+      const formMessage = document.getElementById('formMessage');
+      if(formMessage){
+        formMessage.style.display = 'block';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

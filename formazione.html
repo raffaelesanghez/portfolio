@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Base -->
+  <title>Raffaele Sanghez | Web Developer</title>
+  <meta name="description" content="Portfolio personale di Raffaele Sanghez, Web Developer. Presentazione, competenze e formazione.">
+  <meta name="keywords" content="Raffaele Sanghez, Web Developer, Portfolio, HTML, CSS, JavaScript, PHP, MySQL, WordPress, Responsive Design">
+  <meta name="author" content="Raffaele Sanghez">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Raffaele Sanghez | Web Developer">
+  <meta property="og:description" content="Portfolio personale di Raffaele Sanghez, Web Developer. Presentazione, competenze e formazione.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.raffaelesanghez.com/">
+  <meta property="og:image" content="https://www.raffaelesanghez.com/img/profilo.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Raffaele Sanghez | Web Developer">
+  <meta name="twitter:description" content="Portfolio personale di Raffaele Sanghez, Web Developer. Presentazione, competenze e formazione.">
+  <meta name="twitter:image" content="https://www.raffaelesanghez.com/img/profilo.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- Font e CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">RS</div>
+    <ul>
+      <li><a href="index.html#about">Chi sono</a></li>
+      <li><a href="index.html#skills">Competenze</a></li>
+      <li><a href="formazione.html" class="active">Formazione</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sezione Formazione -->
+  <section id="education" class="education-page">
+    <h1>Percorso Formativo</h1>
+    <p class="intro">
+      La mia formazione è il frutto di passione, curiosità e costante aggiornamento nel mondo dello sviluppo web e delle tecnologie digitali.
+    </p>
+
+    <div class="timeline">
+      <div class="edu-item">
+        <h3>🎓 Diploma tecnico superiore 5° livello EQF</h3>
+        <p><strong>ITS Academy Apulia Digital Maker</strong> – 2023 / 2025</p>
+        <p>Specializzazione in sviluppo software, web design e gestione progetti digitali. Approfonditi linguaggi come HTML, CSS, JavaScript, PHP e database MySQL.</p>
+      </div>
+
+      <div class="edu-item">
+        <h3>💻 Diploma di Perito Tecnico Informatico</h3>
+        <p><strong>Istituto Tecnico Industriale “G. Moschetti”</strong> – 1999 / 2004</p>
+        <p>Formazione di base in informatica, reti e sistemi, con approccio tecnico e laboratoriale allo sviluppo software.</p>
+      </div>
+
+      <div class="edu-item">
+        <h3>🚀 Formazione continua</h3>
+        <p>Seguo costantemente corsi e aggiornamenti su piattaforme come Udemy, Coursera e YouTube, per restare al passo con le tecnologie moderne (React, WordPress, UX/UI Design).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer>
+    <p>© 2025 Raffaele Sanghez – Web Developer</p>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/raffaele-sanghez-1a75a190/" target="_blank" rel="noopener">LinkedIn</a> |
+      <a href="mailto:raffosan@gmail.com">Email</a>
+    </div>
+  </footer>
+<script>
+  // Funzione per rendere visibili le sezioni quando entrano in viewport
+  function checkSections() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        sec.classList.add('visible');
+      }
+    });
+  }
+
+  // Controlla le sezioni al caricamento della pagina
+  window.addEventListener('load', checkSections);
+
+  // Controlla le sezioni quando si scrolla
+  window.addEventListener('scroll', checkSections);
+
+  // --- Script specifico per il form contatti ---
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // blocca invio reale
+      this.style.display = 'none';
+      const formMessage = document.getElementById('formMessage');
+      if(formMessage){
+        formMessage.style.display = 'block';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
