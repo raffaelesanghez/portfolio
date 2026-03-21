@@ -30,21 +30,7 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-  });
-  document.querySelectorAll('#nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
-    });
-  });
-</script>
 <body>
 
 <!-- Navbar -->
@@ -58,8 +44,7 @@
   </div>
 
   <ul id="nav-menu">
-    <li><a href="#about">Chi sono</a></li>
-    <li><a href="#skills">Competenze</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="formazione.html">Formazione</a></li>
     <li><a href="contatti.html">Contatti</a></li>
   </ul>
@@ -147,6 +132,30 @@
       }
     });
   }
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // chiusura al click link
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  } else {
+    console.error("Elemento hamburger o nav-menu non trovato");
+  }
+});
 </script>
 
 </body>
