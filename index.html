@@ -14,14 +14,14 @@
   <meta property="og:title" content="Raffaele Sanghez | Web Developer">
   <meta property="og:description" content="Portfolio personale di Raffaele Sanghez, Web Developer. Presentazione, competenze e formazione.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.raffaelesanghez.com/">
-  <meta property="og:image" content="https://www.raffaelesanghez.com/img/profilo.jpg">
+  <meta property="og:url" content="https://raffaelesanghez.github.io/portfolio/">
+  <meta property="og:image" content="https://raffaelesanghez.github.io/portfolio/img/profilo.jpg">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Raffaele Sanghez | Web Developer">
   <meta name="twitter:description" content="Portfolio personale di Raffaele Sanghez, Web Developer. Presentazione, competenze e formazione.">
-  <meta name="twitter:image" content="https://www.raffaelesanghez.com/img/profilo.jpg">
+  <meta name="twitter:image" content="https://raffaelesanghez.github.io/portfolio/img/profilo.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="img/favicon.png">
@@ -30,19 +30,40 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+  document.querySelectorAll('#nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">RS</div>
-    <ul>
-      <li><a href="#about">Chi sono</a></li>
-      <li><a href="#skills">Competenze</a></li>
-      <li><a href="formazione.html">Formazione</a></li>
-      <li><a href="contatti.html">Contatti</a></li>
-    </ul>
-  </nav>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">RS</div>
 
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul id="nav-menu">
+    <li><a href="#about">Chi sono</a></li>
+    <li><a href="#skills">Competenze</a></li>
+    <li><a href="formazione.html">Formazione</a></li>
+    <li><a href="contatti.html">Contatti</a></li>
+  </ul>
+</nav>
   <!-- Sezione Chi sono -->
   <section id="about" class="about">
     <div class="about-container">
