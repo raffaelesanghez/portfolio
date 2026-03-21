@@ -33,15 +33,22 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">RS</div>
-    <ul>
-      <li><a href="index.html#about">Chi sono</a></li>
-      <li><a href="index.html#skills">Competenze</a></li>
-      <li><a href="formazione.html" class="active">Formazione</a></li>
-      <li><a href="contatti.html">Contatti</a></li>
-    </ul>
-  </nav>
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">RS</a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="formazione.html">Formazione</a></li>
+    <li><a href="contatti.html">Contatti</a></li>
+  </ul>
+</nav>
 
   <!-- Sezione Formazione -->
   <section id="education" class="education-page">
@@ -78,37 +85,6 @@
       <a href="mailto:raffosan@gmail.com">Email</a>
     </div>
   </footer>
-<script>
-  // Funzione per rendere visibili le sezioni quando entrano in viewport
-  function checkSections() {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(sec => {
-      const rect = sec.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        sec.classList.add('visible');
-      }
-    });
-  }
-
-  // Controlla le sezioni al caricamento della pagina
-  window.addEventListener('load', checkSections);
-
-  // Controlla le sezioni quando si scrolla
-  window.addEventListener('scroll', checkSections);
-
-  // --- Script specifico per il form contatti ---
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // blocca invio reale
-      this.style.display = 'none';
-      const formMessage = document.getElementById('formMessage');
-      if(formMessage){
-        formMessage.style.display = 'block';
-      }
-    });
-  }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
