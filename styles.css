@@ -354,7 +354,7 @@ footer .social a:hover {
     align-items: center;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;  
+    transition: max-height 0.3s ease-in-out;  
   }
 
   /* MENU ATTIVO */
