@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
   <!-- SEO Base -->
   <title>Raffaele Sanghez | Web Developer</title>
   <meta name="description" content="Portfolio personale di Raffaele Sanghez, Web Developer. Presentazione, competenze e formazione.">
@@ -29,16 +30,18 @@
   <!-- Font e CSS -->
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
 <!-- Navbar -->
 <nav class="navbar">
-  <div class="logo">
-    <a href="index.html">RS</a>
-  </div>
-  <div class="hamburger" id="hamburger">
+<div class="logo">
+  <a href="index.html">
+    <img src="img/favicon.png" alt="RS Logo">
+  </a>
+</div>  <div class="hamburger" id="hamburger">
     <span></span>
     <span></span>
     <span></span>
@@ -50,38 +53,105 @@
     <li><a href="contatti.html">Contatti</a></li>
   </ul>
 </nav>
+
+<section class="hero">
+  <div class="hero-container">
+    <h1>
+      Raffaele <br>
+      <span>Sanghez</span>
+    </h1>
+
+    <p>
+      Web Developer — creo esperienze digitali moderne, veloci e funzionali.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#skills" class="btn primary">Competenze</a>
+      <a href="contatti.html" class="btn secondary">Contattami</a>
+    </div>
+  </div>
+</section>
+
   <!-- Sezione Chi sono -->
-  <section id="about" class="about">
-    <div class="about-container">
-      <img src="img/1583160815378.jpeg" alt="">
-      <div class="about-text">
-        <h1>Ciao, sono <span>Raffaele Sanghez</span></h1>
-        <p>
-          Sono un <strong>Web Developer</strong> con una forte passione per la creazione di interfacce moderne, accessibili e responsive. 
-          Mi dedico a trasformare le idee in esperienze digitali funzionali, eleganti e performanti. 
-          Continuo a formarmi sulle tecnologie più recenti per offrire soluzioni sempre all’avanguardia.
-        </p>
-        <a href="contatti.html" class="btn">Contattami</a>
-      </div>
-    </div>
-  </section>
+<section id="about" class="about">
+  <div class="about-container">
 
+    <div class="about-text">
+      <h2>Chi sono</h2>
+
+      <p>
+        Sono un <strong>Web Developer</strong> con una forte passione per la creazione 
+        di interfacce moderne, accessibili e performanti.
+      </p>
+
+      <p>
+        Trasformo idee in esperienze digitali funzionali, con attenzione a design, 
+        usabilità e performance.
+      </p>
+
+      <a href="contatti.html" class="btn primary">Contattami</a>
+    </div>
+
+    <div class="about-image">
+      <img src="img/1583160815378.jpeg" alt="Raffaele Sanghez">
+    </div>
+
+  </div>
+</section>
   <!-- Sezione Competenze -->
-  <section id="skills" class="skills">
+<section id="skills" class="skills">
+  <div class="skills-container">
+    
     <h2>Competenze</h2>
-    <div class="skills-grid">
-      <div class="skill-card">HTML5</div>
-      <div class="skill-card">CSS3 / SASS</div>
-      <div class="skill-card">JavaScript / jQuery</div>
-      <div class="skill-card">PHP / MySQL</div>
-      <div class="skill-card">Bootstrap</div>
-      <div class="skill-card">WordPress</div>
-      <div class="skill-card">Git / GitHub</div>
-      <div class="skill-card">Java</div>
-      <div class="skill-card">Responsive Design</div>
-    </div>
-  </section>
+    <p class="skills-subtitle">
+      Tecnologie e strumenti che utilizzo per sviluppare progetti web moderni
+    </p>
 
+<div class="skills-grid">
+
+  <div class="skill-card">
+    <i class="fab fa-html5"></i>
+    <span>HTML5</span>
+  </div>
+
+  <div class="skill-card">
+    <i class="fab fa-css3-alt"></i>
+    <span>CSS3 / SASS</span>
+  </div>
+
+  <div class="skill-card">
+    <i class="fab fa-js"></i>
+    <span>JavaScript</span>
+  </div>
+
+  <div class="skill-card">
+    <i class="fas fa-database"></i>
+    <span>PHP / MySQL</span>
+  </div>
+
+  <div class="skill-card">
+    <i class="fab fa-bootstrap"></i>
+    <span>Bootstrap</span>
+  </div>
+
+  <div class="skill-card">
+    <i class="fab fa-wordpress"></i>
+    <span>WordPress</span>
+  </div>
+
+  <div class="skill-card">
+    <i class="fab fa-git-alt"></i>
+    <span>Git / GitHub</span>
+  </div>
+
+  <div class="skill-card">
+    <i class="fab fa-java"></i>
+    <span>Java</span>
+  </div>
+
+</div>
+  </div>
+</section>
   <!-- Footer -->
   <footer>
     <p>© 2025 Raffaele Sanghez – Web Developer</p>
