@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", function() {
   // 2️⃣ FADE-IN SEZIONI
   // -----------------------------
   function checkSections() {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section:not(.hero)');
     sections.forEach(sec => {
       const rect = sec.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
+      if (rect.top < window.innerHeight - 80) {
         sec.classList.add('visible');
       }
     });
