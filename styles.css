@@ -278,6 +278,7 @@ footer .social a:hover {
 
 /* Contatti */
 .contact {
+  padding-top: 40px;
   text-align: center;
   max-width: 600px;
 }
@@ -287,6 +288,16 @@ footer .social a:hover {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.contact a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact a:hover {
+  opacity: 0.6;
 }
 
 .form-group {
@@ -302,25 +313,27 @@ footer .social a:hover {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 10px;
-  border: 2px solid #2ecc71;
-  border-radius: 8px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
-  background: #111;
-  color: #fff;
+  background: #fff;
+  color: #111;
+  transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #7fff00;
+  border-color: #111;
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
 }
 
 .form-message {
-  background: #1e4d3a;
-  color: #2ecc71;
-  border: 1px solid #2ecc71;
+  background: #f5f5f5;
+  color: #111;
+  border: 1px solid #ddd;
   padding: 15px;
   border-radius: 10px;
   font-weight: 500;
@@ -355,11 +368,12 @@ footer .social a:hover {
   top: 0;
   bottom: 0;
   width: 3px;
-  background-color: #2ecc71;
+  background-color: #ddd;
 }
 
 .edu-item {
-  background: #111;
+  background: #fff;
+  border: 1px solid #eee;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -374,7 +388,7 @@ footer .social a:hover {
   top: 20px;
   width: 14px;
   height: 14px;
-  background-color: #2ecc71;
+  background-color: #111;
   border-radius: 50%;
   border: 2px solid #111;
 }
@@ -384,7 +398,7 @@ footer .social a:hover {
 }
 
 .edu-item h3 {
-  color: #2ecc71;
+  color: #111;
   margin-bottom: 5px;
 }
 
@@ -470,6 +484,24 @@ footer .social a:hover {
 
 .hero-buttons {
   margin-top: 30px;
+}
+
+/* HERO PAGINE INTERNE */
+.page-hero {
+  padding: 180px 20px 100px;
+  text-align: center;
+  background: #fff;
+}
+
+.page-hero-content h1 {
+  font-size: 56px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.page-hero-content p {
+  color: #666;
+  font-size: 18px;
 }
 
 .btn.primary {
