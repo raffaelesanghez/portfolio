@@ -43,14 +43,14 @@ background: rgba(255,255,255,0.8);
   flex-direction: column;
   font-size: 28px;
   cursor: pointer;
-  color: #fff;
+  color: #111;
   gap: 5px;
 }
 
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: #fff;
+  background-color: #111;
   transition: 0.3s;
 }
 
@@ -94,7 +94,7 @@ background: rgba(255,255,255,0.8);
 
 .navbar ul li a:hover,
 .navbar ul li a.active {
-  color: #111;
+  color: #fff;
   opacity: 0.6;
 }
 
@@ -444,6 +444,7 @@ footer .social a:hover {
 
   .navbar ul li {
     margin: 15px 0;
+    color:#fff;
   }
 
   .navbar ul li a {
