@@ -41,9 +41,7 @@ background: rgba(255,255,255,0.8);
 .hamburger {
   display: none;
   flex-direction: column;
-  font-size: 28px;
   cursor: pointer;
-  color: #111;
   gap: 5px;
 }
 
@@ -51,6 +49,7 @@ background: rgba(255,255,255,0.8);
   width: 25px;
   height: 3px;
   background-color: #111;
+  border-radius: 5px;
   transition: 0.3s;
 }
 
@@ -66,7 +65,6 @@ background: rgba(255,255,255,0.8);
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
-
 
 .logo {
   font-weight: 600;
@@ -87,15 +85,14 @@ background: rgba(255,255,255,0.8);
 
 .navbar ul li a {
   text-decoration: none;
- color: #111;
- font-weight: 600;
-  transition: color 0.3s ease;
+  color: #111;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .navbar ul li a:hover,
 .navbar ul li a.active {
-  color: #fff;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 /* Sezioni */
@@ -147,17 +144,6 @@ section.visible {
 
 .about-image img:hover {
   transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .about-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .about-image img {
-    margin: 0 auto;
-  }
 }
 
 /* Bottone generale */
@@ -409,49 +395,53 @@ footer .social a:hover {
 /* Responsive */
 @media (max-width: 768px) {
 
-  .about-container {
-    flex-direction: column;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* MOSTRA HAMBURGER */
   .hamburger {
     display: flex;
   }
 
-  /* NASCONDI MENU */
   .navbar ul {
     position: absolute;
-    top: 70px;
+    top: 80px;
     left: 0;
     width: 100%;
-    background: rgba(0,0,0,0.95);
+    background: rgba(255,255,255,0.98);
     backdrop-filter: blur(10px);
+
     flex-direction: column;
     align-items: center;
+
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out;  
-  }
 
-  /* MENU ATTIVO */
+    transition: max-height 0.3s ease;
+  }
+  
   .navbar ul.active {
     max-height: 300px;
+    padding: 20px 0;
   }
 
   .navbar ul li {
-    margin: 15px 0;
-    color:#fff;
+    margin: 10px 0;
   }
 
   .navbar ul li a {
-    font-size: 1.2rem;
+    color: #111;
+    font-size: 1.1rem;
   }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-image img {
+    margin: 0 auto;
+  }
+
 }
-/* HERO MODERNA */
+  
+  /* HERO MODERNA */
 .hero {
   height: 100vh;
   display: flex;
