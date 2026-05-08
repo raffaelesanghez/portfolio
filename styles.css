@@ -15,9 +15,12 @@ body {
   background-color: #ffffff;
   color: #111;
   line-height: 1.6;
-  scroll-behavior: smooth;
   padding-top: 80px;
   overflow-x: hidden;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 /* Navbar */
@@ -81,6 +84,7 @@ background: rgba(255,255,255,0.8);
   display: flex;
   list-style: none;
   gap: 25px;
+  align-items: center;
 }
 
 .navbar ul li a {
@@ -158,9 +162,9 @@ section.visible {
 }
 
 .btn:hover {
-  background: #27ae60;
+  background: #111;
   color: #fff;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 /* SKILLS MODERNE */
@@ -207,7 +211,8 @@ section.visible {
 
   gap: 10px;
 
-  transition: all 0.3s ease}
+  transition: all 0.3s ease;
+}
 
 .skill-card:hover {
   border-color: #111;
@@ -259,7 +264,7 @@ color: #555;
 }
 
 footer .social a:hover {
-  color: #111;
+  color: #fff;
 }
 
 /* Contatti */
@@ -400,6 +405,7 @@ footer .social a:hover {
   }
 
   .navbar ul {
+    display: flex;
     position: absolute;
     top: 80px;
     left: 0;
